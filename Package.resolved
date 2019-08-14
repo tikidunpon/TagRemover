@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Files",
+        "repositoryURL": "https://github.com/JohnSundell/Files",
+        "state": {
+          "branch": null,
+          "revision": "92b57bea0e737e7d92b5ff281f46ec2b59faf91c",
+          "version": "3.1.0"
+        }
+      },
+      {
+        "package": "SwiftSoup",
+        "repositoryURL": "https://github.com/scinfu/SwiftSoup",
+        "state": {
+          "branch": null,
+          "revision": "a2b316e9574c6904e08995290a975cb16693ac24",
+          "version": "2.2.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
