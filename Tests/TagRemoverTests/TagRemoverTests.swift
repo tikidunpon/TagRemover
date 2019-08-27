@@ -1,7 +1,14 @@
 import XCTest
 import class Foundation.Bundle
+import TagRemoverCore
 
 final class TagRemoverTests: XCTestCase {
+    
+    func testRemoveTag() {
+        let actual = TagRemover.removeTag(htmlOrPath: "<h3>This is <strong>awesome</strong> sample html</h3>")
+        XCTAssertEqual(actual, "This is awesome sample html")
+    }
+    
     func testExample() throws {
         
         // This is an example of a functional test case.
@@ -12,7 +19,7 @@ final class TagRemoverTests: XCTestCase {
         guard #available(macOS 10.13, *) else {
             return
         }
-
+        
         let fooBinary = productsDirectory.appendingPathComponent("TagRemover")
 
         let process = Process()
