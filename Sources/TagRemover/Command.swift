@@ -8,16 +8,13 @@ public final class Command {
         self.arguments = arguments
     }
     
-    public func run() throws {
+    public func run() {
         guard arguments.count > 1 else {
-            throw Error.missingInput
+            print("error: missing input")
+            return
         }
-        try TagRemover.removeTag(htmlOrPath: arguments[1])
-    }
-}
-
-public extension Command {
-    enum Error: Swift.Error {
-        case missingInput
+        if let text = TagRemover.removeTag(htmlOrPath: arguments[1]) {
+            print(text)
+        }
     }
 }
