@@ -6,6 +6,7 @@ let package = Package(
     name: "TagRemover",
     products: [
       .executable(name: "TagRemover", targets: ["TagRemover"]),
+      .library(name: "TagRemoverCore", targets: ["TagRemoverCore"]),
     ],
     dependencies: [
         .package(url: "https://github.com/scinfu/SwiftSoup", from: "2.2.0"),
